@@ -75,7 +75,7 @@ int main()
 		else
 		{
 			time_out++;
-			if(time_out> IDLE_COUNT)
+			 if((time_out> IDLE_COUNT) && (HDMI_ON==1))
 			{
 				printf("sleep now..\n");
 				//turn HDMI off				
