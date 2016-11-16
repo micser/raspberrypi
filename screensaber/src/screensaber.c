@@ -35,7 +35,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <linux/input.h>
 
 #define MOUSEFILE "/dev/input/mice"
-#define IDLE_COUNT 30
+#define IDLE_COUNT 3600
 int main()
 {
     int fd;
