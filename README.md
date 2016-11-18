@@ -1,3 +1,9 @@
+About this fork...
+
+No new functionality, just a default value of 45 minutes for the screen timeout, and extra commands to sleep and wake my LCD panel. Not sure why, but they seem necessary.
+
+Original readme below...
+==========
 Raspberrypi utilities and stub by glframebuffer [ http://glframebuffer.wordpress.com ]
 ===========
 
