@@ -35,7 +35,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <linux/input.h>
 
 #define MOUSEFILE "/dev/input/mice"
-#define IDLE_COUNT 3600
+#define IDLE_COUNT 2700
 int main()
 {
     int fd;
@@ -68,6 +68,7 @@ int main()
 				if(HDMI_ON == 0)
 				{
 					system ("/opt/vc/bin/tvservice -p");
+					system ("xset dpms force on");
 				}
 			HDMI_ON = 1;
 			
@@ -81,6 +82,7 @@ int main()
 				//turn HDMI off				
 				printf("power down  HDMI \n");
 				system ("/opt/vc/bin/tvservice -o");
+   				system ("xset dpms force off");
 				HDMI_ON = 0;
 				
 			}

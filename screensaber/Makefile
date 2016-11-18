@@ -1,2 +1,2 @@
 all:
-		gcc src/screensaber.c -o bin/screensaber
+		gcc src/screensaber.c -o ../hdmi_off
