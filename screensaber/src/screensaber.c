@@ -68,7 +68,8 @@ int main()
 				if(HDMI_ON == 0)
 				{
 					system ("/opt/vc/bin/tvservice -p");
-					system ("xset dpms force on");
+					system ("/usr/bin/xset dpms force on");
+					system ("/bin/fbset --geometry 1024 768 1024 768 32");
 				}
 			HDMI_ON = 1;
 			
@@ -79,10 +80,10 @@ int main()
 			 if((time_out> IDLE_COUNT) && (HDMI_ON==1))
 			{
 				printf("sleep now..\n");
-				//turn HDMI off				
+				//turn HDMI off
 				printf("power down  HDMI \n");
 				system ("/opt/vc/bin/tvservice -o");
-   				system ("xset dpms force off");
+				system ("/usr/bin/xset dpms force off");
 				HDMI_ON = 0;
 				
 			}
