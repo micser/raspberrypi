@@ -67,9 +67,10 @@ int main()
 			
 				if(HDMI_ON == 0)
 				{
-					system ("/opt/vc/bin/tvservice -p");
-					system ("/usr/bin/xset dpms force on");
-					system ("/bin/fbset --geometry 1024 768 1024 768 32");
+					system ("vcgencmd display_power 1");
+					//system ("/opt/vc/bin/tvservice -p && /bin/fbset --geometry 1024 768 1024 768 32 && xrefresh");
+					//system ("/usr/bin/xset dpms force on");
+					//system ("/bin/fbset --geometry 1024 768 1024 768 32");
 				}
 			HDMI_ON = 1;
 			
@@ -82,8 +83,9 @@ int main()
 				printf("sleep now..\n");
 				//turn HDMI off
 				printf("power down  HDMI \n");
-				system ("/opt/vc/bin/tvservice -o");
-				system ("/usr/bin/xset dpms force off");
+				system ("vcgencmd display_power 0");
+				//system ("/opt/vc/bin/tvservice -o");
+				//system ("/usr/bin/xset dpms force off");
 				HDMI_ON = 0;
 				
 			}
